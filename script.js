@@ -39,26 +39,32 @@ document.addEventListener("DOMContentLoaded", function () {
        ENTRAR
     ====================================================== */
 
-    const entrar =
-        document.getElementById("entrar");
+    const entrar = document.getElementById("entrar");
 
+if (entrar) {
 
-    if (entrar) {
+    entrar.addEventListener("click", function () {
 
-        entrar.addEventListener("click", function () {
+        console.log("BOTÃO ENTRAR CLICADO!");
 
-            mostrarTela("telaPreparando");
+        // Mostra a tela "Preparando seu cantinho..."
+        mostrarTela("telaPreparando");
 
+        // Para o vídeo
+        if (videoInicio) {
+            videoInicio.pause();
+        }
 
-            setTimeout(function () {
+        // Depois de 2,5 segundos vai para a tela de usuário
+        setTimeout(function () {
 
-                mostrarTela("telaUsuario");
+            mostrarTela("telaUsuario");
 
-            }, 2500);
+        }, 2500);
 
-        });
+    });
 
-    }
+}
 
 
     /* =====================================================
@@ -497,4 +503,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-console.log("SCRIPT.JS ESTÁ FUNCIONANDO!");
