@@ -1,0 +1,675 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seu Cantinho 💜</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         TELA INICIAL
+    ====================================================== -->
+
+    <main id="telaInicial" class="tela">
+
+        <div class="fundoEstrelado"></div>
+
+        <div class="painelInicial">
+
+            <div class="luaInicial">☾</div>
+
+            <h1>Seu cantinho</h1>
+
+            <p>
+                Um pequeno lugar preparado especialmente para você.
+            </p>
+
+            <button id="entrar" class="botaoPrincipal">
+                Entrar
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         TELA PREPARANDO
+    ====================================================== -->
+
+    <main id="telaPreparando" class="tela escondida">
+
+        <div class="fundoEstrelado"></div>
+
+        <div class="carregamento">
+
+            <div class="luaCarregamento">☾</div>
+
+            <h1>Preparando seu cantinho...</h1>
+
+            <p>
+                Só um pouquinho. 💜
+            </p>
+
+            <div class="linhaCarregamento"></div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         TELA USUÁRIO
+    ====================================================== -->
+
+    <main id="telaUsuario" class="tela escondida">
+
+        <div class="fundoEstrelado"></div>
+
+        <div class="painelLogin">
+
+            <span class="pequenoTitulo">
+                UMA PEQUENA PERGUNTA
+            </span>
+
+            <h1>Quem está entrando?</h1>
+
+            <p>
+                Antes de continuar, me diga quem você é. 💜
+            </p>
+
+            <input
+                id="usuario"
+                type="text"
+                placeholder="Digite seu nome..."
+                autocomplete="off"
+            >
+
+            <button
+                id="continuarUsuario"
+                class="botaoPrincipal"
+            >
+                Continuar
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         TELA SENHA
+    ====================================================== -->
+
+    <main id="telaSenha" class="tela escondida">
+
+        <div class="fundoEstrelado"></div>
+
+        <div class="painelLogin">
+
+            <span class="pequenoTitulo">
+                QUASE LÁ
+            </span>
+
+            <h1 id="saudacao">
+                Olá
+            </h1>
+
+            <p>
+                Agora falta só mais uma coisinha... 💜
+            </p>
+
+            <input
+                id="senha"
+                type="password"
+                placeholder="Digite a senha..."
+                autocomplete="off"
+            >
+
+            <button
+                id="entrarSenha"
+                class="botaoPrincipal"
+            >
+                Entrar
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         TELA ACESSANDO
+    ====================================================== -->
+
+    <main id="telaAcessando" class="tela escondida">
+
+        <div class="fundoEstrelado"></div>
+
+        <div class="carregamento">
+
+            <div class="luaCarregamento">☾</div>
+
+            <h1>Acessando...</h1>
+
+            <p>
+                Preparando tudo especialmente para você. 💜
+            </p>
+
+            <div class="linhaCarregamento"></div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         TELA DO BOLO
+    ====================================================== -->
+
+    <main id="telaBolo" class="tela escondida">
+
+        <div class="ceuBolo">
+
+            <div class="estrelas"></div>
+
+            <div class="luaBolo">☾</div>
+
+
+            <!-- BOLO -->
+
+            <div
+                class="bolo"
+                id="bolo"
+                title="Clique no bolo"
+            >
+
+                <div class="chama chama1"></div>
+                <div class="chama chama2"></div>
+                <div class="chama chama3"></div>
+
+                <div class="vela vela1"></div>
+                <div class="vela vela2"></div>
+                <div class="vela vela3"></div>
+
+                <div class="camadaBolo topo"></div>
+                <div class="camadaBolo meio"></div>
+                <div class="camadaBolo baixo"></div>
+
+                <div class="pratoBolo"></div>
+
+            </div>
+
+
+            <h1 class="tituloBolo">
+                Um pequeno presente
+            </h1>
+
+
+            <button
+                id="cliqueBolo"
+                class="botaoBolo"
+            >
+                Clique aqui
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         TELA PRINCIPAL
+    ====================================================== -->
+
+    <main id="paginaPrincipal" class="tela escondida">
+
+        <div class="introSite">
+
+            <div class="introLua">☾</div>
+
+            <h1>
+                Feliz aniversário,
+                <span>meu amor.</span>
+            </h1>
+
+            <p>
+                Preparei esse pequeno cantinho especialmente
+                para você. Espero que cada detalhe consiga
+                transmitir um pouquinho do amor que sinto por você.
+            </p>
+
+            <button
+                id="comecarPresente"
+                class="botaoPrincipal"
+            >
+                Começar ✨
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         SITE DO PRESENTE
+    ====================================================== -->
+
+    <main id="paginaPresente" class="site escondida">
+
+
+        <!-- MENU LATERAL -->
+
+        <aside class="menuLateral">
+
+            <div class="logoMenu">
+                ☾
+            </div>
+
+            <button
+                class="menuItem ativo"
+                data-pagina="inicio"
+            >
+                <span>⌂</span>
+                Início
+            </button>
+
+            <button
+                class="menuItem"
+                data-pagina="carta"
+            >
+                <span>♡</span>
+                Carta
+            </button>
+
+            <button
+                class="menuItem"
+                data-pagina="sobre"
+            >
+                <span>✦</span>
+                Ela
+            </button>
+
+            <button
+                class="menuItem"
+                data-pagina="fotos"
+            >
+                <span>◌</span>
+                Fotos
+            </button>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+
+        <section class="conteudoSite">
+
+
+            <!-- =================================================
+                 INÍCIO
+            ================================================== -->
+
+            <div
+                id="conteudoInicio"
+                class="paginaConteudo"
+            >
+
+                <section class="hero">
+
+                    <div class="heroTexto">
+
+                        <span class="pequenoTitulo">
+                            PARA A MINHA PESSOA FAVORITA
+                        </span>
+
+                        <h1>
+                            FELIZ ANIVERSÁRIO,
+                            <br>
+                            MEU AMOR.
+                        </h1>
+
+                        <p>
+                            Hoje é o seu dia, e eu queria que
+                            você tivesse um pequeno lugar onde
+                            pudesse encontrar todo o carinho
+                            que preparei para você.
+                        </p>
+
+                        <button
+                            id="botaoAbrirCarta"
+                            class="botaoPrincipal"
+                        >
+                            Abrir minha carta ✦
+                        </button>
+
+                    </div>
+
+
+                    <div class="heroFoto">
+
+                        <div class="molduraFoto">
+
+                            <img
+                                src="imagens/foto-anny.jpg"
+                                alt="Foto da Anny"
+                            >
+
+                        </div>
+
+                        <div class="decoracaoEstrela estrelaA">
+                            ✦
+                        </div>
+
+                        <div class="decoracaoEstrela estrelaB">
+                            ✧
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ENVELOPE -->
+
+                <section class="envelopeDestaque">
+
+                    <div class="envelopeVisual">
+
+                        <div class="luaEnvelope">
+                            ☾
+                        </div>
+
+                        <div class="fitaEnvelope"></div>
+
+                        <div class="detalheEnvelope">
+                            ✦
+                        </div>
+
+                    </div>
+
+                    <h2>
+                        Uma carta para você
+                    </h2>
+
+                    <p>
+                        Algumas coisas são difíceis de dizer
+                        em poucas palavras.
+                    </p>
+
+                    <button
+                        id="botaoAbrirCarta2"
+                        class="botaoPrincipal"
+                    >
+                        Ler carta
+                    </button>
+
+                </section>
+
+            </div>
+
+
+            <!-- =================================================
+                 CARTA
+            ================================================== -->
+
+            <div
+                id="conteudoCarta"
+                class="paginaConteudo escondida"
+            >
+
+                <section class="secaoCarta">
+
+                    <span class="pequenoTitulo">
+                        COM TODO O MEU AMOR
+                    </span>
+
+                    <h1>
+                        Uma carta para você
+                    </h1>
+
+                    <div class="areaCarta">
+
+                        <div class="brilhoCarta"></div>
+
+                        <div
+                            id="cartaEnvelope"
+                            class="cartaEnvelope"
+                        >
+
+                            <div class="cartaCorpo"></div>
+
+                            <div class="cartaTampa"></div>
+
+                            <div class="cartaPapel">
+
+                                <div class="papelConteudo">
+
+                                    <div class="luaPapel">
+                                        ☾
+                                    </div>
+
+                                    <h2>
+                                        Para a minha princesa
+                                    </h2>
+
+                                    <p>
+                                        Hoje é o seu dia, mas quem
+                                        ganhou um presente fui eu
+                                        quando você entrou na minha
+                                        vida.
+                                    </p>
+
+                                    <p>
+                                        Eu espero que você nunca
+                                        esqueça o quanto é especial,
+                                        importante e amada.
+                                    </p>
+
+                                    <p>
+                                        Que seu novo ciclo seja cheio
+                                        de momentos bonitos, sonhos
+                                        realizados e motivos para sorrir.
+                                    </p>
+
+                                    <p>
+                                        Eu estarei aqui, torcendo por
+                                        você, cuidando de você e
+                                        comemorando cada conquista ao
+                                        seu lado.
+                                    </p>
+
+                                    <p class="assinatura">
+                                        Com todo meu amor,<br>
+                                        sua pessoa. 💜
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        id="abrirCarta"
+                        class="botaoPrincipal"
+                    >
+                        Abrir minha carta
+                        <span>✦</span>
+                    </button>
+
+                </section>
+
+            </div>
+
+
+            <!-- =================================================
+                 SOBRE ELA
+            ================================================== -->
+
+            <div
+                id="conteudoSobre"
+                class="paginaConteudo escondida"
+            >
+
+                <section class="sobreEla">
+
+                    <div class="sobreImagem">
+
+                        <img
+                            src="imagens/foto-anny2.jpg"
+                            alt="Foto da Anny"
+                        >
+
+                    </div>
+
+                    <div class="sobreTexto">
+
+                        <span class="pequenoTitulo">
+                            UM POUQUINHO SOBRE VOCÊ
+                        </span>
+
+                        <h1>
+                            A mulher que você é
+                        </h1>
+
+                        <p>
+                            Talvez você nem perceba todos os
+                            detalhes bonitos que existem em você.
+                        </p>
+
+                        <p>
+                            A forma como você se importa, como
+                            demonstra carinho, como enfrenta as
+                            coisas e até mesmo os pequenos gestos
+                            que você considera normais fazem de
+                            você alguém muito especial.
+                        </p>
+
+                        <p>
+                            Você possui uma beleza que vai muito
+                            além daquilo que os olhos conseguem
+                            enxergar.
+                        </p>
+
+                        <p>
+                            E eu espero que, nesse novo ciclo,
+                            você consiga enxergar em si mesma
+                            pelo menos uma parte de tudo aquilo
+                            que eu enxergo em você.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- =================================================
+                 FOTOS
+            ================================================== -->
+
+            <div
+                id="conteudoFotos"
+                class="paginaConteudo escondida"
+            >
+
+                <section class="galeria">
+
+                    <div class="tituloGaleria">
+
+                        <span class="pequenoTitulo">
+                            ALGUNS PEDACINHOS DE VOCÊ
+                        </span>
+
+                        <h1>
+                            Pequenos registros
+                        </h1>
+
+                        <p>
+                            Porque cada detalhe seu merece
+                            ser guardado.
+                        </p>
+
+                    </div>
+
+
+                    <div class="gridFotos">
+
+                        <div class="fotoCard foto1">
+
+                            <img
+                                src="imagens/foto-anny.jpg"
+                                alt="Foto da Anny"
+                            >
+
+                        </div>
+
+
+                        <div class="fotoCard foto2">
+
+                            <img
+                                src="imagens/foto-anny2.jpg"
+                                alt="Foto da Anny"
+                            >
+
+                        </div>
+
+
+                        <div class="fotoCard foto3">
+
+                            <img
+                                src="imagens/foto-anny3.png"
+                                alt="Foto da Anny"
+                            >
+
+                        </div>
+
+
+                        <div class="fotoCard foto4">
+
+                            <img
+                                src="imagens/foto-anny4.jpg"
+                                alt="Foto da Anny"
+                            >
+
+                        </div>
+
+
+                        <div class="fotoCard foto5">
+
+                            <img
+                                src="imagens/foto-anny5.jpg"
+                                alt="Foto da Anny"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

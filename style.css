@@ -1,0 +1,1922 @@
+
+/* =========================================================
+   CONFIGURAÇÕES
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background: #08050f;
+
+    color: white;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.escondida {
+    display: none !important;
+}
+
+
+/* =========================================================
+   TELAS
+========================================================= */
+
+.tela {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   FUNDO ESTRELADO
+========================================================= */
+
+.fundoEstrelado {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(125, 65, 190, 0.25),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(100, 50, 170, 0.12),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #08040f,
+            #160923,
+            #090510
+        );
+}
+
+.fundoEstrelado::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle,
+            rgba(207,180,255,.5) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        80px 80px,
+        130px 130px;
+
+    background-position:
+        10px 20px,
+        50px 80px;
+
+    opacity: .5;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PAINEL INICIAL
+========================================================= */
+
+.painelInicial {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: min(90%, 500px);
+
+    padding: 55px 45px;
+
+    text-align: center;
+
+    background:
+        rgba(35,18,53,.48);
+
+    border:
+        1px solid
+        rgba(203,168,255,.15);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.5),
+        0 0 50px rgba(132,75,190,.12);
+
+    z-index: 10;
+}
+
+.luaInicial {
+
+    width: 80px;
+    height: 80px;
+
+    margin:
+        0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 55px;
+
+    color: #d9bdff;
+
+    filter:
+        drop-shadow(
+            0 0 18px
+            rgba(190,140,255,.8)
+        );
+}
+
+.painelInicial h1 {
+
+    font-size: 36px;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+}
+
+.painelInicial p {
+
+    color: #c9bdd5;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   BOTÃO PRINCIPAL
+========================================================= */
+
+.botaoPrincipal {
+
+    border:
+        1px solid
+        rgba(221,196,255,.35);
+
+    background:
+        linear-gradient(
+            135deg,
+            #6e3b9f,
+            #9b6bd0
+        );
+
+    color: white;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+
+    margin-top: 28px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(99,52,146,.3);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        filter .3s ease;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+.botaoPrincipal:hover {
+
+    transform:
+        translateY(-3px);
+
+    filter:
+        brightness(1.12);
+
+    box-shadow:
+        0 15px 40px
+        rgba(140,82,200,.45);
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.painelLogin {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: min(90%, 480px);
+
+    padding: 50px 45px;
+
+    text-align: center;
+
+    background:
+        rgba(28,14,42,.55);
+
+    border:
+        1px solid
+        rgba(214,184,255,.15);
+
+    border-radius: 28px;
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.45);
+
+    z-index: 10;
+}
+
+.pequenoTitulo {
+
+    display: block;
+
+    color: #b998d9;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.painelLogin h1 {
+
+    font-size: 36px;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+}
+
+.painelLogin p {
+
+    color: #c9bdd5;
+
+    line-height: 1.7;
+}
+
+.painelLogin input {
+
+    width: 100%;
+
+    padding: 15px 18px;
+
+    margin-top: 25px;
+
+    border-radius: 14px;
+
+    border:
+        1px solid
+        rgba(214,184,255,.18);
+
+    outline: none;
+
+    background:
+        rgba(255,255,255,.06);
+
+    color: white;
+
+    font-size: 15px;
+
+    text-align: center;
+
+    transition: .3s;
+
+    position: relative;
+
+    z-index: 20;
+}
+
+.painelLogin input:focus {
+
+    border-color: #9b6bd0;
+
+    box-shadow:
+        0 0 20px
+        rgba(155,107,208,.2);
+}
+
+.painelLogin input::placeholder {
+    color: #887b96;
+}
+
+
+/* =========================================================
+   CARREGAMENTO
+========================================================= */
+
+.carregamento {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    text-align: center;
+
+    width: 90%;
+
+    z-index: 10;
+}
+
+.luaCarregamento {
+
+    font-size: 65px;
+
+    color: #d8bdff;
+
+    margin-bottom: 25px;
+
+    animation:
+        flutuar 2.5s
+        ease-in-out
+        infinite;
+
+    filter:
+        drop-shadow(
+            0 0 20px
+            rgba(186,132,255,.7)
+        );
+}
+
+.carregamento h1 {
+
+    font-size: 36px;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+}
+
+.carregamento p {
+
+    color: #c9bdd5;
+
+    line-height: 1.7;
+}
+
+.linhaCarregamento {
+
+    width: 220px;
+
+    height: 2px;
+
+    margin:
+        30px auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #b887e8,
+            transparent
+        );
+
+    animation:
+        carregando 2s
+        ease-in-out
+        infinite;
+}
+
+@keyframes carregando {
+
+    0% {
+        transform: scaleX(.2);
+        opacity: .3;
+    }
+
+    50% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleX(.2);
+        opacity: .3;
+    }
+}
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================================================
+   BOLO
+========================================================= */
+
+.ceuBolo {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(117,67,177,.22),
+            transparent 30%
+        ),
+        linear-gradient(
+            160deg,
+            #07040d,
+            #170a25,
+            #08040d
+        );
+
+    z-index: 1;
+}
+
+.ceuBolo::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle,
+            rgba(207,180,255,.5) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        80px 80px,
+        130px 130px;
+
+    background-position:
+        10px 20px,
+        50px 80px;
+
+    opacity: .5;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.luaBolo {
+
+    position: absolute;
+
+    top: 70px;
+    right: 100px;
+
+    font-size: 70px;
+
+    color: #dfcaff;
+
+    filter:
+        drop-shadow(
+            0 0 20px
+            rgba(200,160,255,.8)
+        );
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   BOLO
+========================================================= */
+
+.bolo {
+
+    position: relative;
+
+    width: 300px;
+
+    height: 250px;
+
+    margin-top: -30px;
+
+    z-index: 20;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+}
+
+
+/* prato */
+
+.pratoBolo {
+
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+
+    width: 260px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #b88be3;
+
+    box-shadow:
+        0 0 25px
+        rgba(176,111,235,.4);
+
+    z-index: 2;
+}
+
+
+/* camadas */
+
+.camadaBolo {
+
+    position: absolute;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:
+        16px
+        16px
+        12px
+        12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9a69c5,
+            #6c3d92
+        );
+
+    box-shadow:
+        inset
+        0 3px 5px
+        rgba(255,255,255,.15),
+
+        0 10px 25px
+        rgba(0,0,0,.4);
+
+    pointer-events: auto;
+}
+
+.camadaBolo.baixo {
+
+    bottom: 38px;
+
+    width: 250px;
+    height: 70px;
+}
+
+.camadaBolo.meio {
+
+    bottom: 98px;
+
+    width: 205px;
+    height: 58px;
+}
+
+.camadaBolo.topo {
+
+    bottom: 145px;
+
+    width: 155px;
+    height: 50px;
+}
+
+
+/* velas */
+
+.vela {
+
+    position: absolute;
+
+    bottom: 190px;
+
+    width: 10px;
+    height: 45px;
+
+    border-radius: 5px;
+
+    background: #d6aaff;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+.vela1 {
+    left: 115px;
+}
+
+.vela2 {
+    left: 145px;
+}
+
+.vela3 {
+    left: 175px;
+}
+
+
+/* chamas */
+
+.chama {
+
+    position: absolute;
+
+    bottom: 230px;
+
+    width: 14px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 50% 70%,
+            #fff,
+            #ffd86b 35%,
+            #c979ff 70%
+        );
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            #d58cff
+        );
+
+    animation:
+        chama .8s
+        ease-in-out
+        infinite alternate;
+
+    z-index: 10;
+
+    pointer-events: none;
+}
+
+.chama1 {
+    left: 113px;
+}
+
+.chama2 {
+    left: 143px;
+}
+
+.chama3 {
+    left: 173px;
+}
+
+@keyframes chama {
+
+    from {
+        transform:
+            scale(.9)
+            rotate(-3deg);
+    }
+
+    to {
+        transform:
+            scale(1.15)
+            rotate(3deg);
+    }
+}
+
+
+/* título */
+
+.tituloBolo {
+
+    margin-top: 20px;
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+
+/* botão do bolo */
+
+.botaoBolo {
+
+    position: relative;
+
+    z-index: 30;
+
+    pointer-events: auto;
+
+    margin-top: 20px;
+
+    padding: 13px 30px;
+
+    border-radius: 50px;
+
+    border:
+        1px solid
+        rgba(220,190,255,.3);
+
+    background:
+        rgba(145,91,193,.2);
+
+    color: white;
+
+    transition: .3s;
+}
+
+.botaoBolo:hover {
+
+    background:
+        rgba(158,99,210,.4);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================================
+   INTRO DO SITE
+========================================================= */
+
+.introSite {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(105,52,158,.3),
+            transparent 40%
+        ),
+        #08050e;
+}
+
+.introLua {
+
+    font-size: 80px;
+
+    color: #dfc8ff;
+
+    filter:
+        drop-shadow(
+            0 0 25px
+            rgba(191,143,255,.8)
+        );
+
+    margin-bottom: 20px;
+}
+
+.introSite h1 {
+
+    max-width: 850px;
+
+    font-size:
+        clamp(45px, 7vw, 85px);
+
+    line-height: .95;
+
+    text-transform: uppercase;
+
+    font-weight: 600;
+}
+
+.introSite h1 span {
+
+    color: #bd91ec;
+}
+
+.introSite p {
+
+    max-width: 650px;
+
+    margin-top: 30px;
+
+    color: #bdb0ca;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SITE
+========================================================= */
+
+.site {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 70% 20%,
+            rgba(90,42,139,.22),
+            transparent 30%
+        ),
+        #08050e;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menuLateral {
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 190px;
+
+    padding: 35px 18px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(47,21,67,.95),
+            rgba(18,9,27,.98)
+        );
+
+    border-right:
+        1px solid
+        rgba(215,180,255,.1);
+
+    z-index: 100;
+}
+
+.logoMenu {
+
+    width: 48px;
+    height: 48px;
+
+    margin:
+        0 auto 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #d9bcff;
+
+    background:
+        rgba(150,100,210,.12);
+
+    font-size: 27px;
+
+    box-shadow:
+        0 0 25px
+        rgba(160,110,220,.15);
+}
+
+.menuItem {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    margin-bottom: 10px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: transparent;
+
+    color: #a99caf;
+
+    text-align: left;
+
+    transition: .3s;
+}
+
+.menuItem span {
+
+    display: inline-block;
+
+    width: 28px;
+
+    color: #bd96dc;
+}
+
+.menuItem:hover {
+
+    color: white;
+
+    background:
+        rgba(161,103,214,.1);
+}
+
+.menuItem.ativo {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(143,87,190,.3),
+            rgba(143,87,190,.08)
+        );
+
+    box-shadow:
+        inset 2px 0 #bb88e8;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.conteudoSite {
+
+    margin-left: 190px;
+
+    min-height: 100vh;
+
+    padding:
+        70px 7%;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height: 620px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.heroTexto h1 {
+
+    font-size:
+        clamp(45px, 5vw, 75px);
+
+    line-height: .98;
+
+    font-weight: 600;
+}
+
+.heroTexto p {
+
+    max-width: 550px;
+
+    margin-top: 25px;
+
+    color: #b9adbf;
+
+    line-height: 1.8;
+}
+
+.heroFoto {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.molduraFoto {
+
+    width:
+        min(430px, 90%);
+
+    aspect-ratio: 4 / 5;
+
+    padding: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b58de0,
+            #59347d
+        );
+
+    transform:
+        rotate(2deg);
+
+    box-shadow:
+        0 30px 70px
+        rgba(0,0,0,.5),
+
+        0 0 45px
+        rgba(135,82,185,.2);
+}
+
+.molduraFoto img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.decoracaoEstrela {
+
+    position: absolute;
+
+    color: #d2adff;
+
+    font-size: 30px;
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(200,150,255,.8)
+        );
+}
+
+.estrelaA {
+
+    top: 5%;
+    right: 3%;
+}
+
+.estrelaB {
+
+    bottom: 8%;
+    left: 2%;
+}
+
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+.envelopeDestaque {
+
+    margin-top: 90px;
+
+    text-align: center;
+
+    padding:
+        70px 20px;
+}
+
+.envelopeVisual {
+
+    position: relative;
+
+    width:
+        min(550px, 90%);
+
+    height: 280px;
+
+    margin:
+        0 auto;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7e4eaa,
+            #402254
+        );
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.5),
+
+        0 0 50px
+        rgba(126,78,170,.18);
+
+    overflow: hidden;
+}
+
+.envelopeVisual::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 49%,
+            rgba(255,255,255,.12) 50%,
+            transparent 51%
+        );
+
+    opacity: .7;
+}
+
+.luaEnvelope {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    font-size: 80px;
+
+    color: #e4d1ff;
+
+    filter:
+        drop-shadow(
+            0 0 20px
+            rgba(230,200,255,.7)
+        );
+
+    z-index: 2;
+}
+
+.fitaEnvelope {
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    width: 18px;
+    height: 100%;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        rgba(220,186,255,.2);
+}
+
+.detalheEnvelope {
+
+    position: absolute;
+
+    right: 30px;
+    bottom: 25px;
+
+    color: #f0d7a4;
+
+    font-size: 25px;
+}
+
+.envelopeDestaque h2 {
+
+    margin-top: 35px;
+
+    font-size: 35px;
+
+    font-weight: 500;
+}
+
+.envelopeDestaque p {
+
+    margin-top: 12px;
+
+    color: #a99dac;
+}
+
+
+/* =========================================================
+   CARTA
+========================================================= */
+
+.secaoCarta {
+
+    text-align: center;
+
+    padding-bottom: 80px;
+}
+
+.secaoCarta h1 {
+
+    font-size:
+        clamp(40px, 5vw, 65px);
+
+    font-weight: 500;
+}
+
+.areaCarta {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 600px;
+
+    margin-top: 60px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.brilhoCarta {
+
+    position: absolute;
+
+    width: 500px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(120,70,180,.18);
+
+    filter:
+        blur(80px);
+
+    pointer-events: none;
+}
+
+.cartaEnvelope {
+
+    position: relative;
+
+    width:
+        min(650px, 90vw);
+
+    height: 390px;
+
+    perspective: 1200px;
+
+    transition: .8s;
+}
+
+.cartaCorpo {
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b5bb4,
+            #432355
+        );
+
+    box-shadow:
+        0 30px 70px
+        rgba(0,0,0,.55),
+
+        0 0 40px
+        rgba(140,90,190,.2);
+
+    overflow: hidden;
+}
+
+.cartaCorpo::before,
+.cartaCorpo::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 70%;
+    height: 70%;
+
+    background:
+        rgba(255,255,255,.06);
+}
+
+.cartaCorpo::before {
+
+    left: -25%;
+    bottom: -20%;
+
+    transform:
+        rotate(45deg);
+}
+
+.cartaCorpo::after {
+
+    right: -25%;
+    bottom: -20%;
+
+    transform:
+        rotate(-45deg);
+}
+
+.cartaTampa {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 58%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a271cb,
+            #5c3477
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            50% 100%
+        );
+
+    transform-origin:
+        top center;
+
+    transition:
+        transform 1s ease;
+
+    z-index: 5;
+}
+
+.cartaPapel {
+
+    position: absolute;
+
+    left: 7%;
+    right: 7%;
+
+    top: 6%;
+
+    height: 88%;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4e8d7,
+            #eadbc6
+        );
+
+    color: #35243c;
+
+    border-radius: 5px;
+
+    transform:
+        translateY(15px);
+
+    opacity: 0;
+
+    transition:
+        transform 1s ease,
+        opacity .6s ease;
+
+    z-index: 3;
+
+    overflow: hidden;
+}
+
+.papelConteudo {
+
+    height: 100%;
+
+    padding:
+        25px 35px;
+
+    border:
+        1px solid
+        rgba(120,75,50,.3);
+
+    overflow-y: auto;
+}
+
+.luaPapel {
+
+    font-size: 35px;
+
+    color: #8d5b9e;
+
+    margin-bottom: 5px;
+}
+
+.papelConteudo h2 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-weight: normal;
+
+    font-size: 27px;
+
+    margin-bottom: 20px;
+}
+
+.papelConteudo p {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+
+    text-align: left;
+}
+
+.papelConteudo .assinatura {
+
+    text-align: right;
+
+    margin-top: 30px;
+
+    font-style: italic;
+}
+
+.cartaEnvelope.cartaAberta
+.cartaTampa {
+
+    transform:
+        rotateX(180deg);
+}
+
+.cartaEnvelope.cartaAberta
+.cartaPapel {
+
+    transform:
+        translateY(-25px);
+
+    opacity: 1;
+
+    z-index: 7;
+}
+
+
+/* =========================================================
+   SOBRE ELA
+========================================================= */
+
+.sobreEla {
+
+    min-height: 700px;
+
+    display: grid;
+
+    grid-template-columns:
+        .9fr 1.1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.sobreImagem {
+
+    position: relative;
+
+    height: 580px;
+
+    padding: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9b70c0,
+            #45235b
+        );
+
+    transform:
+        rotate(-2deg);
+
+    box-shadow:
+        0 30px 70px
+        rgba(0,0,0,.5);
+}
+
+.sobreImagem img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.sobreTexto h1 {
+
+    font-size:
+        clamp(45px, 5vw, 70px);
+
+    font-weight: 500;
+
+    margin-bottom: 35px;
+}
+
+.sobreTexto p {
+
+    color: #bdb0c5;
+
+    line-height: 1.9;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+
+    max-width: 650px;
+}
+
+
+/* =========================================================
+   GALERIA
+========================================================= */
+
+.galeria {
+
+    padding-bottom: 80px;
+}
+
+.tituloGaleria {
+
+    margin-bottom: 55px;
+}
+
+.tituloGaleria h1 {
+
+    font-size:
+        clamp(45px, 5vw, 70px);
+
+    font-weight: 500;
+}
+
+.tituloGaleria p {
+
+    color: #a99cab;
+
+    margin-top: 15px;
+}
+
+.gridFotos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    align-items: center;
+}
+
+.fotoCard {
+
+    position: relative;
+
+    padding: 7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a276c7,
+            #45255c
+        );
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.45),
+
+        0 0 25px
+        rgba(132,78,174,.12);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.fotoCard:hover {
+
+    transform:
+        translateY(-8px)
+        rotate(0deg)
+        scale(1.02);
+
+    box-shadow:
+        0 30px 60px
+        rgba(0,0,0,.55),
+
+        0 0 35px
+        rgba(153,94,202,.25);
+}
+
+.fotoCard img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    aspect-ratio: 4 / 5;
+}
+
+.foto1 {
+    transform: rotate(-2deg);
+}
+
+.foto2 {
+    transform: rotate(2deg);
+}
+
+.foto3 {
+    transform: rotate(-1deg);
+}
+
+.foto4 {
+    transform: rotate(3deg);
+}
+
+.foto5 {
+    transform: rotate(-2deg);
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .menuLateral {
+
+        width: 80px;
+
+        padding:
+            25px 10px;
+    }
+
+    .menuItem {
+
+        text-align: center;
+
+        padding:
+            13px 5px;
+
+        font-size: 0;
+    }
+
+    .menuItem span {
+
+        font-size: 20px;
+
+        width: auto;
+    }
+
+    .conteudoSite {
+
+        margin-left: 80px;
+
+        padding:
+            50px 5%;
+    }
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .heroTexto {
+
+        text-align: center;
+    }
+
+    .heroTexto p {
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sobreEla {
+
+        grid-template-columns: 1fr;
+    }
+
+    .sobreImagem {
+
+        height: 500px;
+    }
+
+    .gridFotos {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .painelInicial,
+    .painelLogin {
+
+        padding:
+            40px 25px;
+    }
+
+    .painelInicial h1,
+    .painelLogin h1 {
+
+        font-size: 29px;
+    }
+
+    .luaBolo {
+
+        top: 30px;
+        right: 30px;
+
+        font-size: 50px;
+    }
+
+    .bolo {
+
+        transform:
+            scale(.8);
+    }
+
+    .introSite {
+
+        padding:
+            30px 20px;
+    }
+
+    .introSite h1 {
+
+        font-size: 45px;
+    }
+
+    .conteudoSite {
+
+        padding:
+            40px 20px;
+    }
+
+    .heroTexto h1 {
+
+        font-size: 42px;
+    }
+
+    .envelopeVisual {
+
+        height: 220px;
+    }
+
+    .areaCarta {
+
+        min-height: 500px;
+    }
+
+    .cartaEnvelope {
+
+        height: 300px;
+    }
+
+    .papelConteudo {
+
+        padding:
+            15px 20px;
+    }
+
+    .papelConteudo h2 {
+
+        font-size: 21px;
+    }
+
+    .papelConteudo p {
+
+        font-size: 13px;
+    }
+
+    .gridFotos {
+
+        grid-template-columns: 1fr;
+    }
+
+}
