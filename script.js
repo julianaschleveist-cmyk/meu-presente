@@ -497,3 +497,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+console.log("SCRIPT.JS ESTÁ FUNCIONANDO!");
